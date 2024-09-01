@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Test</title>
+</head>
+<body>
+	<h1> WELCOME TO THE ONLINE TEST </h1>
+	
+	
+	<p>1.What is the capital of France?</p>
+	<form>
+		<input type="radio" id="q1a" name="q1" value="a">
+		<label for="q1a">Paris</label><br>
+		<input type="radio" id="q1b" name="q1" value="b">
+		<label for="q1b">London</label><br>
+		<input type="radio" id="q1c" name="q1" value="c">
+		<label for="q1c">Berlin</label><br>
+		<input type="radio" id="q1d" name="q1" value="d">
+		<label for="q1d">Rome</label><br>
+	</form>
+	
+	
+	<p>2.Which planet is known as the Red Planet?</p>
+	<form>
+		<input type="radio" id="q2a" name="q2" value="a">
+		<label for="q2a">Earth</label><br>
+		<input type="radio" id="q2b" name="q2" value="b">
+		<label for="q2b">Mars</label><br>
+		<input type="radio" id="q2c" name="q2" value="c">
+		<label for="q2c">Jupiter</label><br>
+		<input type="radio" id="q2d" name="q2" value="d">
+		<label for="q2d">Saturn</label><br>
+	</form>
+	
+	
+	<p>3.Who painted the Mona Lisa?</p>
+	<form>
+		<input type="radio" id="q3a" name="q3" value="a">
+		<label for="q3a">Leonardo da Vinci</label><br>
+		<input type="radio" id="q3b" name="q3" value="b">
+		<label for="q3b">Michelangelo</label><br>
+		<input type="radio" id="q3c" name="q3" value="c">
+		<label for="q3c">Raphael</label><br>
+		<input type="radio" id="q3d" name="q3" value="d">
+		<label for="q3d">Caravaggio</label><br>
+	</form>
+	
+	
+	<button onclick="checkAnswers()">Submit</button>
+	
+	
+	<p id="total-score"></p>
+	
+	
+	<script>
+		function checkAnswers() {
+			let totalScore = 0;
+			
+			// Q 1
+			if (document.querySelector('input[name="q1"]:checked').value === 'a') {
+				totalScore++;
+			}
+			
+			// Q 2
+			if (document.querySelector('input[name="q2"]:checked').value === 'b') {
+				totalScore++;
+			}
+			
+			// Q 3
+			if (document.querySelector('input[name="q3"]:checked').value === 'a') {
+				totalScore++;
+			}
+			
+			// Display total marks
+			document.getElementById('total-score').innerHTML = 'Your total score is: ' + totalScore + '/3'+'<br>'+'Answer:';
+		}
+	</script>
+</body>
+</html>
