@@ -7,16 +7,19 @@
 	<h1> WELCOME TO THE ONLINE TEST </h1>
 	
 	
-	<p>1.What is the capital of France?</p>
+	<p>1.What is the output of below code in javascript?</p>
+	<div>const num;
+             num = 5;
+             console.log(num); </div>
 	<form>
 		<input type="radio" id="q1a" name="q1" value="a">
-		<label for="q1a">Paris</label><br>
+		<label for="q1a">10</label><br>
 		<input type="radio" id="q1b" name="q1" value="b">
-		<label for="q1b">London</label><br>
+		<label for="q1b">Undefined</label><br>
 		<input type="radio" id="q1c" name="q1" value="c">
-		<label for="q1c">Berlin</label><br>
+		<label for="q1c">Syntax Error: Missing initialization in const declaration  </label><br>
 		<input type="radio" id="q1d" name="q1" value="d">
-		<label for="q1d">Rome</label><br>
+		<label for="q1d">5</label><br>
 	</form>
 	
 	
@@ -57,7 +60,7 @@
 			let totalScore = 0;
 			
 			// Q 1
-			if (document.querySelector('input[name="q1"]:checked').value === 'a') {
+			if (document.querySelector('input[name="q1"]:checked').value === 'c') {
 				totalScore++;
 			}
 			
